@@ -1,0 +1,4 @@
+fastai
+voila
+ipywidgets
+jupyterlab
