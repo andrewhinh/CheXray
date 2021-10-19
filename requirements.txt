@@ -1,3 +1,6 @@
-fastai
-voila
-ipywidgets
+fastai==2.2.7
+fastbook==0.0.16
+ipywidgets==7.5.0
+pydicom==2.1.2
+viola==0.3.8
+#voila==0.2.16
