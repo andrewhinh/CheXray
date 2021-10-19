@@ -4,4 +4,4 @@ ipywidgets==7.5.0
 pydicom==2.1.2
 viola
 torch==1.7.1
-torchvision==0.8.2+cu101
+torchvision==0.8.2
