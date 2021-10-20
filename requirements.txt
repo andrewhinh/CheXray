@@ -1,9 +1,7 @@
 fastai
+fastbook
 ipywidgets
-#pydicom
+pydicom
 viola
-#pyarrow 
-#kornia 
-#opencv-python 
-#scikit-image 
-#nbdev
+kornia  
+scikit-image 
