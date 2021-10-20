@@ -1,7 +1,7 @@
-fastai
-fastbook
-ipywidgets
-pydicom
-viola
-kornia  
-scikit-image 
+fastai==2.2.7
+fastbook==0.0.16
+ipywidgets==7.5.0
+pydicom==2.1.2
+viola==0.3.8
+kornia==0.4.1
+scikit-image==0.16.2
