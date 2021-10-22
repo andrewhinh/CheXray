@@ -1,5 +1,6 @@
 dependencies:
-  - python=="3.8.10"
+  - python==3.8.10
+  - pip
   - pip: 
     - spacy==2.2.4
     - viola==0.3.8
