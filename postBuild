@@ -1,0 +1,3 @@
+set -e 
+
+jupyter lab --port=8899 --config=jupyter_notebook_config.py production.ipynb
