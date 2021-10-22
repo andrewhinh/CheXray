@@ -10,4 +10,4 @@ dependencies:
     - ipywidgets==7.6.3 #==7.5.0
     - pydicom==2.2.2 #==2.1.2
     - kornia==0.5.11 #==0.4.1
-    - scikit-image==0.18.3 #==0.16.2
+    - scikit-image==0.18.3 #==0.16.2 
