@@ -1,5 +1,4 @@
-spacy
-#==2.2.4
+spacy==2.2.4
 viola
 #==0.3.8
 language-tool-python
