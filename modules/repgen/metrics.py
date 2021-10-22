@@ -1,8 +1,8 @@
 import pickle
 from fastai.vision.all import *
 from modules.repgen.pycocoevalcap.bleu.bleu import Bleu
-from modules.repgen.pycocoevalcap.meteor import Meteor
-from modules.repgen.pycocoevalcap.rouge import Rouge
+from modules.repgen.pycocoevalcap.meteor.meteor import Meteor
+from modules.repgen.pycocoevalcap.rouge.rouge import Rouge
 
 class_learn = load_learner(Path('./models/txtcls.pkl'))      
 with open(Path('./modules/repgen/vocab.pkl'), 'rb') as f: vocab = pickle.load(f)

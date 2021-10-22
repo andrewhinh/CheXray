@@ -12,3 +12,4 @@ kornia
 #==0.4.1
 scikit-image
 #==0.16.2
+spacy==2.2.4
