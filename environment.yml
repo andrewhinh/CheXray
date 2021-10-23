@@ -12,3 +12,4 @@ dependencies:
     - pydicom==2.1.2 #==2.2.2
     - kornia==0.4.1 #==0.5.11
     - scikit-image==0.16.2 #==0.18.3
+    - Pillow==7.0.0 #
