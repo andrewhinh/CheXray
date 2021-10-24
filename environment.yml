@@ -1,8 +1,11 @@
+-f https://download.pytorch.org/whl/torch_stable.html
 #versions: myenv, binderenv, myenvextras
 dependencies:
   - python==3.8.10 #
   - pip==21.0 #
   - pip: 
+    - torch==1.7.1+cpu #
+    - torchvision==0.8.2+cpu #
     - spacy==2.3.5 #==2.2.4
     - viola==0.3.8 #, ==0.2.16
     - language-tool-python==2.6.1 #
