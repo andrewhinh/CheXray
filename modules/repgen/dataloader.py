@@ -1,8 +1,5 @@
 import torch
 import numpy as np
-import fastbook
-fastbook.setup_book()
-from fastbook import *
 from fastai.data.load import _FakeLoader, _loaders
 
 def collate_fn(data):

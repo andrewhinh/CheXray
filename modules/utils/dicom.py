@@ -1,9 +1,7 @@
-import fastbook
-fastbook.setup_book()
-from fastbook import *
 from fastai.basics import *
 from fastai.callback.all import *
 from fastai.medical.imaging import *
+from fastai.vision.core import PILBase
 
 def dcmread2(fn):
     dcm = Path(fn).dcmread(force=True)
