@@ -1,5 +1,4 @@
 -f https://download.pytorch.org/whl/torch_stable.html
-pip==21.0 
 torch==1.7.1+cpu 
 torchvision==0.8.2+cpu 
 spacy==2.3.5 
