@@ -1,7 +1,0 @@
--f https://download.pytorch.org/whl/torch_stable.html
-torch==1.7.1+cpu 
-torchvision==0.8.2+cpu 
-spacy==2.3.5 
-viola==0.3.8 
-fastai==2.2.7
-Pillow==7.0.0
