@@ -1,3 +1,4 @@
+from PIL import Image
 from fastai.basics import *
 from fastai.callback.all import *
 from fastai.medical.imaging import *
