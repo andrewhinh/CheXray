@@ -1,6 +1,7 @@
 import torch
 import numpy as np
 from fastai.data.load import _FakeLoader, _loaders
+from fastai.torch_core import to_device
 
 #from modules.sum.dataloader import SumDL  
 from fastai.data.load import _FakeLoader, _loaders
@@ -45,7 +46,7 @@ class SumDL():
     
     def one_batch(self):
         "Grab a batch from the `DataLoader`"
-        with self.fake_l.no_multiproc(): res = first(self)
+        with self.fake_l.no_multiproc(): res = next(iter(self))
         if hasattr(self, 'it'): delattr(self, 'it')
         return res
     
