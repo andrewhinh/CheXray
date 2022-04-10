@@ -1,13 +1,15 @@
 import torch
 import numpy as np
+import fastbook
+fastbook.setup_book()
+from fastbook import *
 from fastai.data.load import _FakeLoader, _loaders
-from fastai.torch_core import to_device
 
 #from modules.sum.dataloader import SumDL  
 from fastai.data.load import _FakeLoader, _loaders
 
 class SumDL():
-    def __init__(self, device, *args):
+    def __init__(self, *args, device=None):
         "Stores away `tab_dl` and `vis_dl`, and overrides `shuffle_fn`"
         self.device = device
         for dl in args: dl.shuffle_fn = self.shuffle_fn
@@ -46,7 +48,7 @@ class SumDL():
     
     def one_batch(self):
         "Grab a batch from the `DataLoader`"
-        with self.fake_l.no_multiproc(): res = next(iter(self))
+        with self.fake_l.no_multiproc(): res = first(self)
         if hasattr(self, 'it'): delattr(self, 'it')
         return res
     
