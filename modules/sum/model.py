@@ -1,12 +1,7 @@
 import torch
 import torch.nn as nn
 import numpy as np
-
 import modules.sum.logits as log
-from fastai.vision.all import *
-
-class cast_to_tensor(Module):
-    def forward(self, x): return cast(x, Tensor)
         
 class SumModel(nn.Module):
     def __init__(self, vis_model, txtcls_model, tab_model, num_classes=14):

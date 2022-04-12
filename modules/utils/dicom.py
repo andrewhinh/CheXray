@@ -1,8 +1,9 @@
+import pydicom
+import numpy as np
 from PIL import Image
-from fastai.basics import *
-from fastai.callback.all import *
-from fastai.medical.imaging import *
+from pathlib import Path
 from fastai.vision.core import PILBase
+from fastai.medical.imaging import TensorDicom
 
 def dcmread2(fn):
     dcm = Path(fn).dcmread(force=True)

@@ -16,18 +16,3 @@ def compute_loss(predrep, masklbl, reduction=None):
     criterion = LanguageModelCriterion()
     loss = criterion(preds, reps[:, 1:], masks[:, 1:]).mean()
     return loss
-
-class myGradientBlending(nn.Module):
-    def __init__(self, loss_scale=1.0, *args):
-        "Expects weights for each model, the combined model, and an overall scale"
-        super(myGradientBlending, self).__init__()
-        self.weights = args
-        self.scale = loss_scale
-        
-    def forward(self, xb, yb):
-        outs = list(xb)
-        masklbl = yb
-        "Gathers `self.loss` for each model, weighs, then sums"
-        loss=0
-        for idx in range(len(self.weights)): loss+=compute_loss([outs[idx], outs[-1]], masklbl) * self.scale * self.weights[idx]
-        return loss
