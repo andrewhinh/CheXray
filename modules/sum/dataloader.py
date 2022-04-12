@@ -1,12 +1,8 @@
 import torch
 import numpy as np
-import fastbook
-fastbook.setup_book()
-from fastbook import *
 from fastai.data.load import _FakeLoader, _loaders
-
-#from modules.sum.dataloader import SumDL  
-from fastai.data.load import _FakeLoader, _loaders
+from fastai.torch_core import to_device
+from fastcore.basics import first
 
 class SumDL():
     def __init__(self, *args, device=None):
@@ -29,7 +25,7 @@ class SumDL():
         else: return self.rng
         
     def to(self, device): self.device = device
-                
+
     def __iter__(self):
         "Iterate over your `DataLoader`"
         z = zip(*[_loaders[i.fake_l.num_workers==0](i.fake_l) for i in self.dls])
