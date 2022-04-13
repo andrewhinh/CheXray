@@ -3,5 +3,6 @@
 Credit:
 - https://github.com/fastai/fastai
 - https://github.com/cuhksz-nlp/R2Gen
+- https://github.com/muellerzr
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewhinh/CheXRay-v2/HEAD?urlpath=voila%2Frender%2Fproduction.ipynb?voila-theme=dark)
