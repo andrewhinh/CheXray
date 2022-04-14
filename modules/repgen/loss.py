@@ -7,7 +7,8 @@ class LanguageModelCriterion(nn.Module):
         # truncate to the same size
         target = target[:, :input.size(1)]
         mask = mask[:, :input.size(1)]
-        output = -input.gather(2, target.long().unsqueeze(2)).squeeze(2) * mask
+        if torch.__version__ == '1.8.2+cu111': output = -input.gather(2, target.long().unsqueeze(2)).squeeze(2) * mask
+        else: output = -input.unsqueeze(2).gather(2, target.long().unsqueeze(2)).squeeze(2) * mask
         output = torch.sum(output) / torch.sum(mask)
         return output
 def compute_loss(predrep, masklbl, reduction=None):
