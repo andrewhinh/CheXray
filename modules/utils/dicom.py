@@ -1,5 +1,5 @@
-import pydicom
-import numpy as np
+from pydicom.filebase import DicomBytesIO
+from numpy import int32
 from PIL import Image
 from pathlib import Path
 from fastai.vision.core import PILBase
@@ -20,8 +20,8 @@ class PILDicom2(PILBase):
     def create(cls, fn:(Path,str,bytes), mode=None)->None:
         "Open a `DICOM file` from path `fn` or bytes `fn` and load it as a `PIL Image`"
         # images are np.int16, but this cannont be handled by PIL. Will throw wrong mode error. 
-        if isinstance(fn,bytes): im = Image.fromarray(dcmread2(pydicom.filebase.DicomBytesIO(fn)))
-        if isinstance(fn,(Path,str)): im = Image.fromarray(dcmread2(fn).astype(np.int32))
+        if isinstance(fn,bytes): im = Image.fromarray(dcmread2(DicomBytesIO(fn)))
+        if isinstance(fn,(Path,str)): im = Image.fromarray(dcmread2(fn).astype(int32))
         im.load()
         im = im._new(im.im)
         return cls(im.convert(mode) if mode else im)

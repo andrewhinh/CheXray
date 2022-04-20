@@ -1,9 +1,10 @@
-import pickle
-from fastai.vision.all import *                                ###############
+from pickle import load
+from fastai.learner import load_learner
+from pathlib import Path
 from modules.repgen.pycocoevalcap.bleu.bleu import Bleu
 
 class_learn = load_learner(Path('./models/txtcls.pkl'))      
-with open(Path('./modules/repgen/vocab.pkl'), 'rb') as f: vocab = pickle.load(f)
+with open(Path('./modules/repgen/vocab.pkl'), 'rb') as f: vocab = load(f)
 
 def compute_scores(predrep, masklbl, scorer, thresh=None):
     """
