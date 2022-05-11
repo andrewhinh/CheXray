@@ -41,8 +41,15 @@ class SumModel(nn.Module):
             txtcls_log = torch.unsqueeze(txtcls_log, 0)
             tab_log = torch.unsqueeze(tab_log, 0)
 
+        vis_log = torch.tensor(vis_log)
+        txtcls_log = torch.tensor(txtcls_log)
+        tab_log = torch.tensor(tab_log)
+            
         mixed = torch.cat((vis_log, txtcls_log, tab_log), dim=2)
 
         # Mixed Classifier
         out_mix = self.mixed_cls(torch.squeeze(mixed, 0))
-        return (out_vis, out_txtcls[0], out_tab, out_mix)
+        return (torch.tensor(out_vis), 
+                torch.tensor(out_txtcls[0]), 
+                torch.tensor(out_tab), 
+                torch.tensor(out_mix))
