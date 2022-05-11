@@ -8,8 +8,8 @@ class SumModel(nn.Module):
         super(SumModel, self).__init__()
         self.models = nn.ModuleList([vis_model, txtcls_model, tab_model])
         self.classes = num_classes
-
-        self.vis_handle = self.models[0][-1][-1].register_forward_hook(log.get_vis_logits)
+        self.vis_handle = self.models[0].mlp[-1].register_forward_hook(log.get_vis_logits)
+        #self.vis_handle = self.models[0][-1][-1].register_forward_hook(log.get_vis_logits)
         self.txtcls_handle = list(self.models[1][-1].children())[-1][-1][-1].register_forward_hook(log.get_txtcls_logits)
         self.tab_handle = self.models[2].layers[-1][0].register_forward_hook(log.get_tab_logits)
 
@@ -17,8 +17,10 @@ class SumModel(nn.Module):
                         self.txtcls_handle,
                         self.tab_handle]
     
-        self.mixed_cls = nn.Linear(self.models[0][-1][-1].in_features+list(self.models[1][-1].children())[-1][-1][-1].in_features+self.models[2].layers[-1][0].in_features, 
-                                   self.classes)
+        num_vis = self.models[0].mlp[-1].in_features #self.models[0][-1][-1]
+        num_txt = list(self.models[1][-1].children())[-1][-1][-1].in_features
+        num_tab = self.models[2].layers[-1][0].in_features
+        self.mixed_cls = nn.Linear(num_vis+num_txt+num_tab, self.classes) 
         
     def remove_my_hooks(self):
         for handle in self.handles: handle.remove()
