@@ -10,8 +10,7 @@ class SumModel(nn.Module):
         self.classes = num_classes
         self.vis_handle = self.models[0].mlp[-1].register_forward_hook(log.get_vis_logits)
         #self.vis_handle = self.models[0][-1][-1].register_forward_hook(log.get_vis_logits)
-        self.txtcls_handle = self.models[1].mlp[-1].register_forward_hook(log.get_txtcls_logits)
-        #self.txtcls_handle = list(self.models[1][-1].children())[-1][-1][-1].register_forward_hook(log.get_txtcls_logits)
+        self.txtcls_handle = list(self.models[1][-1].children())[-1][-1][-1].register_forward_hook(log.get_txtcls_logits)
         self.tab_handle = self.models[2].layers[-1][0].register_forward_hook(log.get_tab_logits)
 
         self.handles = [self.vis_handle,
@@ -19,7 +18,7 @@ class SumModel(nn.Module):
                         self.tab_handle]
     
         num_vis = self.models[0].mlp[-1].in_features #self.models[0][-1][-1]
-        num_txt = self.models[1].mlp[-1].in_features #list(self.models[1][-1].children())[-1][-1][-1].in_features
+        num_txt = list(self.models[1][-1].children())[-1][-1][-1].in_features
         num_tab = self.models[2].layers[-1][0].in_features
         self.mixed_cls = nn.Linear(num_vis+num_txt+num_tab, self.classes) 
         
