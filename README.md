@@ -1,4 +1,4 @@
-# CheXRay: Automatically Diagnosing Chest X-Rays using Generated Radiologist Reports and Patient Information
+# CheXRay-v2: Automatically Diagnosing Chest X-Rays using Generated Radiologist Reports and Patient Information
 
 Credit:
 - https://github.com/fastai/fastai
