@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-def loss_func(pred, targ): return nn.BCEWithLogitsLoss()(pred, targ)
+def loss_func(pred, targ): return nn.BCEWithLogitsLoss()(torch.tensor(pred), torch.tensor(targ))
 
 class SumGradientBlending(nn.Module):
     def __init__(self, loss_scale=1.0, set_grad=False, *args):
