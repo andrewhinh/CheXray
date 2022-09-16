@@ -16,7 +16,7 @@ class SumModel(nn.Module):
                         self.txtcls_handle,
                         self.tab_handle]
     
-        num_vis = self.models[0][-1][-1]
+        num_vis = self.models[0][-1][-1].in_features
         num_txt = list(self.models[1][-1].children())[-1][-1][-1].in_features
         num_tab = self.models[2].layers[-1][0].in_features
         self.mixed_cls = nn.Linear(num_vis+num_txt+num_tab, self.classes) 
@@ -48,7 +48,8 @@ class SumModel(nn.Module):
 
         # Mixed Classifier
         out_mix = self.mixed_cls(torch.squeeze(mixed, 0))
-        return (torch.tensor(out_vis), 
-                torch.tensor(out_txtcls[0]), 
-                torch.tensor(out_tab), 
-                torch.tensor(out_mix))
+
+        return (out_vis, 
+                out_txtcls[0], 
+                out_tab, 
+                out_mix)
