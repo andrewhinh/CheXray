@@ -1,6 +1,9 @@
 # CheXRay-v2
 
-A website [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewhinh/CheXRay-v2/HEAD?urlpath=voila%2Frender%2Fproduction.ipynb?voila-theme=dark) for automatically diagnosing chest x-rays using generated radiologist reports and patient information.
+A website for automatically diagnosing chest x-rays using generated radiologist reports and patient information.
+
+## Link
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewhinh/CheXRay-v2/HEAD?urlpath=voila%2Frender%2Fproduction.ipynb?voila-theme=dark)
 
 ## Credit:
 - https://github.com/fastai/fastai
