@@ -11,6 +11,7 @@ A website for automatically diagnosing chest x-rays using generated radiologist 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewhinh/CheXRay-v2/HEAD?urlpath=voila%2Frender%2Fproduction.ipynb?voila-theme=dark)
 
 ## Credit:
-- https://github.com/fastai/fastai
-- https://github.com/cuhksz-nlp/R2Gen
-- https://github.com/muellerzr
+- [fast.ai](https://github.com/fastai/fastai) for their model training code.
+- [Shenzhen Research Institute of Big Data](https://github.com/cuhksz-nlp/R2Gen) for their radiologist report generation model.
+- [Zachary Mueller](https://github.com/muellerzr) for his ideas around multi-modal model training.
+- [MyBinder](https://mybinder.org/) for their repository hosting platform.
