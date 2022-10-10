@@ -2,9 +2,11 @@
 
 A website for automatically diagnosing chest x-rays using generated radiologist reports and patient information.
 
-<img width="779" alt="Screen Shot 2021-10-31 at 10 44 01 PM" src="https://user-images.githubusercontent.com/40700820/194950007-cfe0cac1-8c0b-476f-aabd-12543956b177.png">
-<img width="709" alt="Screen Shot 2021-10-31 at 11 19 35 PM" src="https://user-images.githubusercontent.com/40700820/194950200-43b0ce78-d26e-4917-9991-db011f3456a6.png">
-<img width="1025" alt="Screen Shot 2021-10-31 at 11 20 48 PM" src="https://user-images.githubusercontent.com/40700820/194950046-43572cea-9bd3-4608-8196-5df48b7f00d9.png">
+<img width="1252" alt="Screen Shot 2022-10-10 at 2 07 17 PM" src="https://user-images.githubusercontent.com/40700820/194953166-9e1a7e5b-6cae-42cc-8ced-ecd68c7fc43e.png">
+<img width="1357" alt="Screen Shot 2022-10-10 at 2 11 30 PM" src="https://user-images.githubusercontent.com/40700820/194953183-6390a2f2-1124-412e-b3c6-8ff7e540cd8d.png">
+<img width="652" alt="Screen Shot 2022-10-10 at 2 11 43 PM" src="https://user-images.githubusercontent.com/40700820/194953191-5c1c1e98-5ef6-4cfe-891a-18919f5d83c8.png">
+<img width="799" alt="Screen Shot 2022-10-10 at 2 13 04 PM" src="https://user-images.githubusercontent.com/40700820/194953219-436ef691-5f08-4916-a55c-9a890e2ed767.png">
+
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewhinh/CheXRay-v2/HEAD?urlpath=voila%2Frender%2Fproduction.ipynb?voila-theme=dark)
 
