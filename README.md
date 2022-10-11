@@ -14,6 +14,6 @@ A website for automatically diagnosing chest x-rays using generated radiologist 
 
 ## Credit:
 - [fast.ai](https://github.com/fastai/fastai) for their model training code.
-- [Shenzhen Research Institute of Big Data](https://github.com/cuhksz-nlp/R2Gen) for their radiologist report generation model.
+- Shenzhen Research Institute of Big Data for their [radiologist report generation model](https://github.com/cuhksz-nlp/R2Gen).
 - [Zachary Mueller](https://github.com/muellerzr) for his ideas around multi-modal model training.
 - [Binder](https://mybinder.org/) for their repository hosting platform.
