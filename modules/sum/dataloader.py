@@ -12,7 +12,7 @@ class SumDL():
         self.dls = args
         self.count = 0
         for dl in self.dls: dl._DataLoader__idxs = sorted(self.dls[0].get_idxs())
-        self.fake_l = _FakeLoader(self, False, 0, 0, True) #TypeError: __init__() missing 1 required positional argument: 'persistent_workers'
+        self.fake_l = _FakeLoader(self, False, 0, 0, persistent_workers=True, pin_memory_device='') 
     
     def __len__(self): return len(self.dls[0])
         
