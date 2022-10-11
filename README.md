@@ -2,6 +2,7 @@
 
 A website for automatically diagnosing chest x-rays using generated radiologist reports and patient information.
 
+<img width="730" alt="Screen Shot 2022-10-10 at 8 39 11 PM" src="https://user-images.githubusercontent.com/40700820/194991875-0c4aaaf3-b187-49fc-82a3-c8184a8fbe51.png">
 <img width="652" alt="Screen Shot 2022-10-10 at 2 11 43 PM" src="https://user-images.githubusercontent.com/40700820/194953191-5c1c1e98-5ef6-4cfe-891a-18919f5d83c8.png">
 <img width="799" alt="Screen Shot 2022-10-10 at 2 13 04 PM" src="https://user-images.githubusercontent.com/40700820/194953219-436ef691-5f08-4916-a55c-9a890e2ed767.png">
 
