@@ -2,8 +2,10 @@
 
 A website for automatically diagnosing chest x-rays using generated radiologist reports and patient information.
 
-<img width="652" alt="Screen Shot 2022-10-10 at 2 11 43 PM" src="https://user-images.githubusercontent.com/40700820/194953191-5c1c1e98-5ef6-4cfe-891a-18919f5d83c8.png">
-<img width="799" alt="Screen Shot 2022-10-10 at 2 13 04 PM" src="https://user-images.githubusercontent.com/40700820/194953219-436ef691-5f08-4916-a55c-9a890e2ed767.png">
+<img width="122" alt="Screen Shot 2022-10-10 at 9 10 33 PM" src="https://user-images.githubusercontent.com/40700820/194995746-de504c63-0291-46ad-9848-5159bf9df4bb.png">
+<img width="1399" alt="Screen Shot 2022-10-10 at 9 12 01 PM" src="https://user-images.githubusercontent.com/40700820/194995751-9c48e214-ccf6-4467-a7b9-3017a1f20ea1.png">
+<img width="652" alt="Screen Shot 2022-10-10 at 9 12 47 PM" src="https://user-images.githubusercontent.com/40700820/194995769-2923011e-0cb9-4b0e-acaa-b30859ee5fbe.png">
+<img width="795" alt="Screen Shot 2022-10-10 at 9 13 13 PM" src="https://user-images.githubusercontent.com/40700820/194995776-5c02b3c7-355b-4d94-8132-f30a84e6d8b5.png">
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewhinh/CheXRay-v2/HEAD?urlpath=voila%2Frender%2Fproduction.ipynb?voila-theme=dark)
 
