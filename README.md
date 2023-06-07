@@ -1,4 +1,4 @@
-# CheXRay-v2
+# CheXRay
 
 A website for automatically diagnosing chest x-rays using generated radiologist reports and patient information.
 
